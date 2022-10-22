@@ -1,0 +1,27 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:WinFormHost="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
+        xmlns:WinFormControls="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="480" Width="640">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <!--<WindowsFormHost 
+            Grid.Column="0" Grid.Row="0" x:Name="windowsHost"/>-->
+        <WindowsFormsHost Grid.Column="0" Grid.Row="0" x:Name="windowsHost"/>
+        <StackPanel Grid.Column="1" x:Name="StackP" >
+            <Button Content="Init Window" Click="Btn_Init"/>
+            <Button Content="Add Cylinder" Click="Btn_AddCylinder"/>
+            <Button Content="Refresh" Click="Btn_Refresh"/>
+            <Button Content="CloseRender" Click="Btn_CloseRender"/>
+        </StackPanel>
+    </Grid>
+</Window>
